@@ -17,6 +17,9 @@ hr {
 .navbar {
   padding: 10px;
   background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -26,14 +29,21 @@ hr {
 .nav-links a {
   text-decoration: none;
   color: #0025FF;
+  padding: 8px;
 }
 
 /* Practice: Equal-width cards */
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
 
 .card {
   background: lightblue;
   border: 2px solid #0025FF;
   padding: 20px;
+  width: 100%;
 }
 
 /* Codealong: Plan and code a card */
@@ -47,8 +57,64 @@ hr {
 }
 
 article {
-  width: 375px;
-  height: 500px;
+  width: 360px;
+  height: 520px;
   background: white;
   color: rgb(0, 24, 164);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  border: 25px solid white;
+}
+
+/*to add a second border*/
+article:before {
+  content: " ";
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-color: blue;
+  border-style: solid;
+  border-width: 20px 20px 3px 3px;
+}
+
+.top-text p {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.preamble {
+  font-weight: 600;
+  font-size: 21px;
+  padding-right: 18px;
+  line-height: 1.5;
+}
+
+.button {
+  display: block;
+  width: 100px;
+  text-align: center;
+  background: blue;
+  color: white;
+  border-radius: 40px;
+  padding: 23px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
 }
